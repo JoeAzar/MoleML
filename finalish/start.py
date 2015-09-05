@@ -33,4 +33,4 @@ if mode=="production"
 @app.route('/imagePost')
 def classify():
 	img = request.args.get('img')
-	res = extract_phone_image_features(img,age,gender,location,quantloc,concern)
+	print res = extract_phone_image_features(img,age,gender,location,quantloc,concern)
