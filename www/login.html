@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.parsecdn.com/js/parse-1.5.0.min.js"></script>
+    <script type="text/javascript" src="js/parse/parse-login.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <style type="text/css">
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
+
+<body class="blue-grey">
+    <main>
+        <div class="container">
+            <img style="width: 100%; height: auto;" src="img/MoLe2.svg" />
+            <div class="row">
+                <form class="col s12">
+                    <div class="row" style="margin-bottom: 0px; margin-top: -40px;">
+                        <div class="input-field col s12" style="margin-top: 2px;">
+                            <input id="email" type="email" class="validate" style="border-bottom: 1px solid whitesmoke !important; color: whitesmoke;">
+                            <label for="email" style="color: whitesmoke">Email</label>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 0px;">
+                        <div class="input-field col s12" style="margin-top: 2px;">
+                            <input id="password" type="password" class="validate" style="border-bottom: 1px solid whitesmoke !important; color: whitesmoke;">
+                            <label for="password" style="color: whitesmoke">Password</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row center-align">
+             <a class="waves-effect waves-light btn-large" style="background-color: #ffcc00" onclick="login()"><i class="material-icons right">send</i>Login</a>
+            </div>
+        </div>
+    </main>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.js"></script>
+
+</html>
