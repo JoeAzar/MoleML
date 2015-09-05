@@ -14,19 +14,19 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import precision_score
 from sklearn.naive_bayes import GaussianNB, MultinomialNB
 from sklearn import svm
+from sklearn.externals import joblib
 from sklearn import linear_model
-
-FEATURES =  [
-  	'ssim','border_gof','age','gender','location','quantloc','concern',
-]
-
+print "test"
+FEATURES =  ['sym','ssim','border_gof','age','gender','location','quantloc','concern']
+print "test2"
 def Build_Data_Set():
-  data_df = pd.DataFrame.from_csv("compiled.csv")
+  print "test3"
+  data_df = pd.DataFrame.from_csv("compiledfinal.csv")
 
-  # data_df = data_df.reindex(np.random.permutation(data_df.index))
-  
+  data_df = data_df.reindex(np.random.permutation(data_df.index))
+  print "test4"
   X = np.array(data_df[FEATURES].values)
-
+  print "test5"
   y = ( data_df["cancerous"].values.tolist()  )
 
   X = preprocessing.scale(X)
@@ -67,6 +67,7 @@ def Analysis():
   print("Precision:", (float(tp)/(float(tp)+float(fp)))*100)
   print("Recall:", (float(tp)/(float(tp)+float(fn)))*100)
   scores = cross_validation.cross_val_score(clf, X, y, cv = 5)
+  # joblib.dump(clf,'final.pk1')
   with open('test2.pk1', 'wb') as clf_file:
     cPickle.dump(clf, clf_file)
 # test shuffling data:

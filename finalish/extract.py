@@ -14,6 +14,7 @@ from sklearn import cross_validation
 from sklearn.cluster import MiniBatchKMeans
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import precision_score
+from sklearn.externals import joblib
 from sklearn.naive_bayes import GaussianNB, MultinomialNB
 from sklearn import svm
 def extract_phone_image_features(imgorig,age,gender,location,quantloc,concern):
@@ -22,7 +23,7 @@ def extract_phone_image_features(imgorig,age,gender,location,quantloc,concern):
 	mh = height/2 
 	mw = width/2
 	img = img[(mh-300):(mh+300),(mw-300):(mw+300)]
-	cv2.imshow('lel',img)
+	# cv2.imshow('lel',img)
 	x, y, _ = img.shape
 	image = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
   	image = image.reshape((image.shape[0] * image.shape[1], 3))
@@ -42,12 +43,25 @@ def extract_phone_image_features(imgorig,age,gender,location,quantloc,concern):
     #border_gof = 0
   	color_contrast = color.color_contrast(image)
 
-  	current_vec = [symmetry_ssim, border_gof/1000,age,gender,location,quantloc,concern]
+  	current_vec = [symmetry_mse,symmetry_ssim, border_gof,age,gender,location,quantloc,concern]
   	# print current_vec
-  	clf = pickle.load(open('test2.pk1', 'rb'))
+  	clf = pickle.load(open('final.pk1', 'rb'))
   	prediction = clf.predict(np.array(current_vec))
+  	print prediction
+  	print clf.predict_proba(current_vec)
   	return clf.predict_proba(current_vec), prediction
-# extract_phone_image_features("anton.png",39,1,1,3,2)
+# image_list = []
+
+# imgpath = '../hairremove/'
+# img_list = [x[0] for x in os.walk(imgpath)]
+# each_file = os.listdir(imgpath)
+# for x in each_file:
+# 	if x.find("Inpaint") != -1:
+# 		image_list.append(x)
+# for index in range(len(image_list)):
+# 	x = image_list[index]
+# 	extract_phone_image_features(imgpath+x,58,2,1,5,2)
+# extract_phone_image_features("../hairremove/done/ab021407rab31_CNP_Inpaint.tif",58,2,1,5,2)
 
 # def extract_image_features(imgorig,mask):
 #   img = cv2.imread(imgorig)
