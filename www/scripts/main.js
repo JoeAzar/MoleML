@@ -1,5 +1,3 @@
-
-
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function id(element) {
@@ -7,7 +5,7 @@ function id(element) {
 }
 
 function onDeviceReady() {
-	cameraApp = new cameraApp();
+    cameraApp = new cameraApp();
     cameraApp.run();
 
     navigator.splashscreen.hide();
@@ -15,80 +13,81 @@ function onDeviceReady() {
 
 
 
-function cameraApp(){}
+function cameraApp() {}
 
-cameraApp.prototype={
+cameraApp.prototype = {
     _pictureSource: null,
 
     _destinationType: null,
 
-    run: function(){
-        var that=this;
-	    that._pictureSource = navigator.camera.PictureSourceType;
-	    that._destinationType = navigator.camera.DestinationType;
-	    id("capturePhotoButton").addEventListener("click", function(){
-            that._capturePhoto.apply(that,arguments);
+    run: function () {
+        var that = this;
+        that._pictureSource = navigator.camera.PictureSourceType;
+        that._destinationType = navigator.camera.DestinationType;
+        id("capturePhotoButton").addEventListener("click", function () {
+            that._capturePhoto.apply(that, arguments);
         });
-	    id("capturePhotoEditButton").addEventListener("click", function(){
-            that._capturePhotoEdit.apply(that,arguments)
+        id("capturePhotoEditButton").addEventListener("click", function () {
+            that._capturePhotoEdit.apply(that, arguments)
         });
-	    id("getPhotoFromLibraryButton").addEventListener("click", function(){
-            that._getPhotoFromLibrary.apply(that,arguments)
+        id("getPhotoFromLibraryButton").addEventListener("click", function () {
+            that._getPhotoFromLibrary.apply(that, arguments)
         });
-	    id("getPhotoFromAlbumButton").addEventListener("click", function(){
-            that._getPhotoFromAlbum.apply(that,arguments);
+        id("getPhotoFromAlbumButton").addEventListener("click", function () {
+            that._getPhotoFromAlbum.apply(that, arguments);
         });
     },
 
-    _capturePhoto: function() {
+    _capturePhoto: function () {
         var that = this;
 
         // Take picture using device camera and retrieve image as base64-encoded string.
-        navigator.camera.getPicture(function(){
-            that._onPhotoDataSuccess.apply(that,arguments);
-        },function(){
-            that._onFail.apply(that,arguments);
-        },{
+        navigator.camera.getPicture(function () {
+            that._onPhotoDataSuccess.apply(that, arguments);
+        }, function () {
+            that._onFail.apply(that, arguments);
+        }, {
             quality: 50,
             destinationType: that._destinationType.DATA_URL
         });
     },
 
-    _capturePhotoEdit: function() {
+    _capturePhotoEdit: function () {
         var that = this;
         // Take picture using device camera, allow edit, and retrieve image as base64-encoded string.
         // The allowEdit property has no effect on Android devices.
-        navigator.camera.getPicture(function(){
-            that._onPhotoDataSuccess.apply(that,arguments);
-        }, function(){
-            that._onFail.apply(that,arguments);
+        navigator.camera.getPicture(function () {
+            that._onPhotoDataSuccess.apply(that, arguments);
+        }, function () {
+            that._onFail.apply(that, arguments);
         }, {
-            quality: 20, allowEdit: true,
+            quality: 20,
+            allowEdit: true,
             destinationType: cameraApp._destinationType.DATA_URL
         });
     },
 
-    _getPhotoFromLibrary: function() {
-        var that= this;
+    _getPhotoFromLibrary: function () {
+        var that = this;
         // On Android devices, pictureSource.PHOTOLIBRARY and
         // pictureSource.SAVEDPHOTOALBUM display the same photo album.
         that._getPhoto(that._pictureSource.PHOTOLIBRARY);
     },
 
-    _getPhotoFromAlbum: function() {
-        var that= this;
+    _getPhotoFromAlbum: function () {
+        var that = this;
         // On Android devices, pictureSource.PHOTOLIBRARY and
         // pictureSource.SAVEDPHOTOALBUM display the same photo album.
         that._getPhoto(that._pictureSource.SAVEDPHOTOALBUM)
     },
 
-    _getPhoto: function(source) {
+    _getPhoto: function (source) {
         var that = this;
         // Retrieve image file location from specified source.
-        navigator.camera.getPicture(function(){
-            that._onPhotoURISuccess.apply(that,arguments);
-        }, function(){
-            cameraApp._onFail.apply(that,arguments);
+        navigator.camera.getPicture(function () {
+            that._onPhotoURISuccess.apply(that, arguments);
+        }, function () {
+            cameraApp._onFail.apply(that, arguments);
         }, {
             quality: 50,
             destinationType: cameraApp._destinationType.FILE_URI,
@@ -96,15 +95,28 @@ cameraApp.prototype={
         });
     },
 
-    _onPhotoDataSuccess: function(imageData) {
-        var smallImage = document.getElementById('smallImage');
-        smallImage.style.display = 'block';
+    _onPhotoDataSuccess: function (imageData) {
 
         // Show the captured photo.
-        smallImage.src = "data:image/jpeg;base64," + imageData;
+        var b64 = "data:image/jpeg;base64," + imageData;
+        $.post('https://api.cloudinary.com/v1_1/mole/image/upload', {
+            file: b64,
+            api_key: '838912264992939',
+            timestamp: (Date.now() / 1000 | 0) + '',
+            upload_preset: 'atdlnige'
+        }, function (data) {
+            if (data.hasOwnProperty('error')) {
+                alert('Upload failed.');
+            } else {
+                var url = encodeURIComponent(data['url']);
+                $.get('immense-brushlands-9104.herokuapp.com/image/'+url, function(data){
+                alert(data);
+                })
+            }
+        });
     },
 
-    _onPhotoURISuccess: function(imageURI) {
+    _onPhotoURISuccess: function (imageURI) {
         var smallImage = document.getElementById('smallImage');
         smallImage.style.display = 'block';
 
@@ -112,7 +124,7 @@ cameraApp.prototype={
         smallImage.src = imageURI;
     },
 
-    _onFail: function(message) {
+    _onFail: function (message) {
         alert(message);
     }
 }
