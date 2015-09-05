@@ -5,6 +5,8 @@ from sklearn import ensemble, preprocessing
 import pandas as pd
 from matplotlib import style
 style.use("ggplot")
+import pickle
+import cPickle
 
 from sklearn import cross_validation
 from sklearn.cluster import MiniBatchKMeans
@@ -15,7 +17,7 @@ from sklearn import svm
 from sklearn import linear_model
 
 FEATURES =  [
-  	'symmetry','border_gof','age','gender','location','quantloc','concern',
+  	'ssim','border_gof','age','gender','location','quantloc','concern',
 ]
 
 def Build_Data_Set():
@@ -32,23 +34,41 @@ def Build_Data_Set():
   return X,y
 
 def Analysis():
-  test_size = 900
+  test_size = 800
   X, y = Build_Data_Set()
-  print(len(X))
+  # print(len(X))
 
-  clf = RandomForestClassifier(n_estimators = 100)
+  clf = RandomForestClassifier(n_estimators = 30)
   clf.fit(X[:-test_size],y[:-test_size]) # train data
-
+  print clf.predict_proba(X[850])
+  print clf.predict(X[850])[0]
+  print y[850]
   correct_count = 0
+  correct_count = 0
+  tp = 0
+  fn = 0
+  fp = 0
   for x in range(1, test_size+1):
     if clf.predict(X[-x])[0] == y[-x]:
       correct_count += 1
+      if clf.predict(X[-x])[0] == 1:
+      	tp += 1
+    if (clf.predict(X[-x])[0] != y[-x]) and (clf.predict(X[-x])[0] == 0):
+    	fn += 1
+    if (clf.predict(X[-x])[0] != y[-x]) and (clf.predict(X[-x])[0] == 1):
+    	fp += 1
+
+
 
   print("correct_count=%s"%float(correct_count))
   print("test_size=%s"%float(test_size))
   # on OS X with 64-bit python 2.7.6 had to add float(), otherwise result was zero:
   print("Accuracy:", (float(correct_count) / float(test_size)) * 100.00)
-
+  print("Precision:", (float(tp)/(float(tp)+float(fp)))*100)
+  print("Recall:", (float(tp)/(float(tp)+float(fn)))*100)
+  scores = cross_validation.cross_val_score(clf, X, y, cv = 5)
+  with open('test2.pk1', 'wb') as clf_file:
+    cPickle.dump(clf, clf_file)
 # test shuffling data:
 # def Randomizing():
 #   df = pd.DataFrame({"D1":range(5), "D2":range(5)})
