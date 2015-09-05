@@ -1,9 +1,9 @@
-# import logging
-# import os
-# import sys
+import logging
+import os
+import sys
 
-# from flask import Flask, request
-# from analyze_image import classify_image_url
+from flask import Flask, request
+from extract import extract_phone_image_features
 
 # app = Flask(__name__)
 
@@ -25,7 +25,12 @@
 # if __name__ == '__main__':
 #   app.run(debug=True)
 
-from standardize import imageMask
-print imageMask("test2.jpg","test2.tif")
+# from standardize import imageMask
+# print imageMask("test2.jpg","test2.tif")
 
-
+mode = "production" #"training"
+if mode=="production"
+@app.route('/imagePost')
+def classify():
+	img = request.args.get('img')
+	res = extract_phone_image_features(img,age,gender,location,quantloc,concern)
