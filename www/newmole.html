@@ -67,8 +67,7 @@
         var mole = new Mole();
         var arc = new Archive();
         console.log("subbed");
-        console.log('http://45.55.253.85:8000/' + localStorage.getItem('urle') + '/' + cu.get('age') + '/' + cu.get('sex') + '/' + cu.get('tropical_climate') + '/' + parseInt($('#lsel').val()) + '/' + cu.get('family_history'));
-        $.get('http://45.55.253.85:8000/', function (data) {
+        $.get('http://45.55.253.85:8000/' + localStorage.getItem('urle') + '/' + cu.get('age') + '/' + cu.get('sex') + '/' + cu.get('tropical_climate') + '/' + parseInt($('#lsel').val()) + '/' + cu.get('family_history'), function (data) {
             console.log("get init");
             arc.set('name', 'mole 1');
             arc.set('parent', Parse.User.current());
