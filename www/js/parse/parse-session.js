@@ -4,10 +4,10 @@ var currentUser = Parse.User.current();
 if (currentUser) {
     // do stuff with the user
 } else {
-    window.location.replace("index.html");
+    window.location = ("index.html");
 }
 
 function logout(){
     Parse.User.logOut();
-    window.location.replace("index.html");
+    window.location = ("index.html");
 }
