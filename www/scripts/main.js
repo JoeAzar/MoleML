@@ -18,7 +18,8 @@ function check() {
                 alert('Upload failed.');
             } else {
                 localStorage.setItem('url', data['url'] + "");
-                var url = encodeURIComponent(data['url']);
+                var urlOne = encodeURIComponent(data['url']);
+                var url = encodeURIComponent(urlOne);
                 localStorage.setItem('urle', url);
                 window.location = 'newmole.html';
             }
