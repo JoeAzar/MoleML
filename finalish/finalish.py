@@ -54,14 +54,14 @@ def crossdomain(origin=None, methods=None, headers=None,
    return decorator
 
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
 todos = {}
-@app.route('/')
+@application.route('/')
 def hello():
     return "sup bitches"
-@app.route('/imagePost')
+@application.route('/imagePost')
 @crossdomain(origin='*')
 def classify():
     img = request.args.get('img')
@@ -73,4 +73,4 @@ def classify():
     res = extract_phone_image_features(img,age,gender,location,quantloc,concern)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(host='0.0.0.0')
