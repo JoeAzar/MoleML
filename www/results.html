@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <script src="cordova.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/parse-1.5.0.min.js"></script>
+    <script type="text/javascript" src="js/parse/parse-session.js"></script>
+    <style type="text/css">
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1 0 auto;
+        }
+        
+        nav li:hover {
+            background-color: #797979 !important;
+        }
+    </style>
+</head>
+
+<body class="blue-grey">
+    <main>
+        <div class="container">
+            <div style="width: 100%" class="left-align">
+                <img style="width: 30%; height: auto; max-width: 100px;" class="right" src="img/MoLe2.svg" />
+            </div>
+            <div class="row">
+                <div class="col s12" id="text-box">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+<footer class="page-footer" style="background-color: inherit">
+    <div class="content">
+
+        <div class="row">
+            <div class="col s12 center-align">
+<a class="waves-effect waves-yellow btn-large" style="width: 90%; background-color: #ffcc00; margin-bottom: 10px;" onclick="redir()">OK</a>
+            </div>
+        </div>
+</footer>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.js"></script>
+<script>
+    function redir(){window.location = 'home.html';}
+    
+    $('#text-box').append("<p>Your mole is likely <span style='font-size: 20px'>" + (localStorage.getItem("isCancerous") ? "cancerous" : "non-cancerous")+ "</span>. This has been determined with <span style='font-size: 20px'>"+(Math.round(parseFloat(localStorage.getItem("confidence")))) +"%</span> certainty.</p>");
+    </script>
+</html>
