@@ -160,10 +160,9 @@ def AnalysisSpec(vector):
       finalVector = 0
   # print support_count
 
-  test =  clf.predict_proba(vector)
-  # print clf.predict(vector)[0]
-  test2 = np.append(clf.predict_proba(vector),finalVector)
-  return test2
+  arrayFinal = [clf.predict_proba(vector)[0][0], clf.predict_proba(vector)[0][1], finalVector]
+  # print arrayFinal
+  return arrayFinal
   # return finalVector,clf.predict_proba(vector)
 
 # test shuffling data:
