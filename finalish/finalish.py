@@ -56,18 +56,21 @@ def crossdomain(origin=None, methods=None, headers=None,
 
 application = Flask(__name__)
 
-
 todos = {}
-@application.route('/')
+@application.route('/') 
 def hello():
-    return "Hurrah!"
+  isCancerous = extract_phone_image_features("anton.png",18,2,1,5,1)
+#return ' {"isCancerous" : "%s" , "probability" : "%s"} ' % isCancerous, probability
+  return str(isCancerous)
 @application.route('/<image>/<age>/<gender>/<location>/<quantloc>/<concern>')
 @crossdomain(origin='*')
 def classify(image, age, gender, location, quantloc, concern):
-	img=urllib.unquote(image)
+
+  img=urllib.unquote(image)
   req = urllib.urlopen(img)
   img = np.asarray(bytearray(req.read()),dtype=np.uint8)
-	res = extract_phone_image_features(img=image,age=age,gender=gender,location=location,quantloc=quantloc,concern=concern)
+  return extract_phone_image_features(img=image,age=age,gender=gender,location=location,quantloc=quantloc,concern=concern)
 
 if __name__ == '__main__':
-    application.run(host='0.0.0.0')
+    application.run(host='127.0.0.1')
+    application.debug=True

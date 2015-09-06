@@ -145,11 +145,11 @@ def AnalysisSpec(vector):
 
   if clf.predict(vector)[0] == 1:
     for i in range(0,8):
-      if vector[i] > malignant_avgs[i]:
+      if vector[i] < malignant_avgs[i]:
         support_count += 1
   if clf.predict(vector)[0] == 0:
     for j in range(0,8):
-      if vector[j] > benign_avgs[j]:
+      if vector[j] < benign_avgs[j]:
         support_count += 1
   if support_count > 3:
     finalVector = clf.predict(vector)[0]
@@ -157,13 +157,14 @@ def AnalysisSpec(vector):
     if (clf.predict(vector)[0] == 1):
       finalVector = 0
     else: 
-      finalVector = 1
-  print support_count
+      finalVector = 0
+  # print support_count
 
-  print clf.predict_proba(vector)
-  print clf.predict(vector)[0]
-  print finalVector
-  return finalVector,clf.predict_proba(vector)
+  test =  clf.predict_proba(vector)
+  # print clf.predict(vector)[0]
+  test2 = np.append(clf.predict_proba(vector),finalVector)
+  return test2
+  # return finalVector,clf.predict_proba(vector)
 
 # test shuffling data:
 # def Randomizing():

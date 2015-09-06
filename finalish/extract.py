@@ -53,8 +53,8 @@ def extract_phone_image_features(imgorig,age,gender,location,quantloc,concern):
   	concern]
   	# clf2 = pickle.load(open('final.pk1', 'rb'))
   	# print clf2
-  	print imgorig
-  	AnalysisSpec(current_vec)
+  	# print imgorig
+  	return AnalysisSpec(current_vec)
   	# prediction = clf2.predict(np.array(current_vec))[0]
   	# print prediction
   	# print current_vec
