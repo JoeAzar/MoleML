@@ -64,7 +64,9 @@ def hello():
 @application.route('/<image>/<age>/<gender>/<location>/<quantloc>/<concern>')
 @crossdomain(origin='*')
 def classify(image, age, gender, location, quantloc, concern):
-	img=urllib.unquote(image)	
+	img=urllib.unquote(image)
+  req = urllib.urlopen(img)
+  img = np.asarray(bytearray(req.read()),dtype=np.uint8)
 	res = extract_phone_image_features(img=image,age=age,gender=gender,location=location,quantloc=quantloc,concern=concern)
 
 if __name__ == '__main__':
