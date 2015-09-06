@@ -59,7 +59,7 @@ application = Flask(__name__)
 todos = {}
 @application.route('/') 
 def hello():
-  isCancerous = extract_phone_image_features("anton.png",18,2,1,5,1)
+  # isCancerous = extract_phone_image_features("anton.png",18,2,1,5,1)
 #return ' {"isCancerous" : "%s" , "probability" : "%s"} ' % isCancerous, probability
   return str(isCancerous)
 @application.route('/<image>/<age>/<gender>/<location>/<quantloc>/<concern>')
@@ -67,6 +67,7 @@ def hello():
 def classify(image, age, gender, location, quantloc, concern):
 
   img=urllib.unquote(image)
+  urllib.urlretrieve(img,"imageTemp/"+img+"_"+str(gender)+"_"+str(location)+"_"+quantloc+"_"+concern+".jpg") 
   req = urllib.urlopen(img)
   img = np.asarray(bytearray(req.read()),dtype=np.uint8)
   return extract_phone_image_features(img=image,age=age,gender=gender,location=location,quantloc=quantloc,concern=concern)
