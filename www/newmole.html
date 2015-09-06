@@ -62,22 +62,40 @@
 <script type="text/javascript">
     $('#submit').click(function (evt) {
         var Mole = Parse.Object.extend('Mole');
+        var cu = Parse.User.current();
         var Archive = Parse.Object.extend('Archive');
         var mole = new Mole();
         var arc = new Archive();
-        mole.set('isCancerous', /*bool*/ );
-        mole.set('certainty', /*double*/ );
-        mole.set('URL', /*str*/ );
-        mole.set('location_code', parseInt($('#lsel').val()));
-        mole.set('parent', arc);
-        mole.save(null, {
-            success: function (mole) {
-                console.log('New object created with objectId: ' + mole.id);
-            },
-            error: function (mole, error) {
-                console.log('Failed to create new object, with error code: ' + error.message);
-            }
+        console.log("subbed");
+        console.log('http://45.55.253.85:8000/' + localStorage.getItem('urle') + '/' + cu.get('age') + '/' + cu.get('sex') + '/' + cu.get('tropical_climate') + '/' + parseInt($('#lsel').val()) + '/' + cu.get('family_history'));
+        $.get('http://45.55.253.85:8000/', function (data) {
+            console.log("get init");
+            arc.set('name', 'mole 1');
+            arc.set('parent', Parse.User.current());
+            arc.set('location_code', parseInt($('#lsel').val()));
+            arc.save(null, {
+                success: function (arc1) {
+                    var da = data.split(" ");
+                    mole.set('isCancerous', da[2]);
+                    mole.set('certainty', da[0] * 100);
+                    mole.set('URL', localStorage.getItem('url'));
+                    mole.set('parent', arc);
+                    mole.save(null, {
+                        success: function (mole) {
+                            console.log('New object created with objectId: ' + mole.id);
+                        },
+                        error: function (mole, error) {
+                            console.log('Failed to create new object, with error code: ' + error.message);
+                        }
+                    });
+                },
+                error: function (arc1, error) {
+                    console.log('Failed to create new object, with error code: ' + error.message);
+                }
+            });
         });
+
+
     });
 
     $(document).ready(function () {
@@ -110,19 +128,19 @@
                 success: function (arc) { //potential trouble
                     var mole = new Mole();
                     alert(arc);
-//                    mole.set('isCancerous', /*bool*/ );
-//                    mole.set('certainty', /*double*/ );
-//                    mole.set('URL',localStorage.getItem('url'));
-//                    mole.set('location_code', parseInt($('#lsel').val()));
-//                    mole.set('parent', arc);
-//                    mole.save(null, {
-//                        success: function (mole) {
-//                            console.log('New object created with objectId: ' + mole.id);
-//                        },
-//                        error: function (mole, error) {
-//                            console.log('Failed to create new object, with error code: ' + error.message);
-//                        }
-//                    });
+                    var da = data.split(" ");
+                    mole.set('isCancerous', da[2]);
+                    mole.set('certainty', da[0] * 100);
+                    mole.set('URL', localStorage.getItem('url'));
+                    mole.set('parent', arc);
+                    mole.save(null, {
+                        success: function (mole) {
+                            console.log('New object created with objectId: ' + mole.id);
+                        },
+                        error: function (mole, error) {
+                            console.log('Failed to create new object, with error code: ' + error.message);
+                        }
+                    });
                 },
                 error: function (err, d) {}
             });
