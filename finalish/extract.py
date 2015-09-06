@@ -9,7 +9,7 @@ import sys
 import standardize
 import pandas as pd
 from skimage import io
-
+from learn import AnalysisSpec
 from sklearn import cross_validation
 from sklearn.cluster import MiniBatchKMeans
 from sklearn.ensemble import RandomForestClassifier
@@ -42,14 +42,24 @@ def extract_phone_image_features(imgorig,age,gender,location,quantloc,concern):
     #print border_gof
     #border_gof = 0
   	color_contrast = color.color_contrast(image)
-
-  	current_vec = [symmetry_mse,symmetry_ssim, border_gof,age,gender,location,quantloc,concern]
+  	current_vec = [(symmetry_mse/1000),
+  	symmetry_ssim,
+  	(border_gof/10),
+  	color_contrast,
+  	age,
+  	gender,
+  	location,
+  	quantloc,
+  	concern]
+  	# clf2 = pickle.load(open('final.pk1', 'rb'))
+  	# print clf2
+  	print imgorig
+  	AnalysisSpec(current_vec)
+  	# prediction = clf2.predict(np.array(current_vec))[0]
+  	# print prediction
   	# print current_vec
-  	clf = pickle.load(open('final.pk1', 'rb'))
-  	prediction = clf.predict(np.array(current_vec))
-  	print prediction
-  	print clf.predict_proba(current_vec)
-  	return clf.predict_proba(current_vec), prediction
+  	# print clf2.predict_proba(current_vec)
+  	# return clf2.predict_proba(current_vec), prediction
 # image_list = []
 
 # imgpath = '../hairremove/'
@@ -60,8 +70,9 @@ def extract_phone_image_features(imgorig,age,gender,location,quantloc,concern):
 # 		image_list.append(x)
 # for index in range(len(image_list)):
 # 	x = image_list[index]
-# 	extract_phone_image_features(imgpath+x,58,2,1,5,2)
-# extract_phone_image_features("../hairremove/done/ab021407rab31_CNP_Inpaint.tif",58,2,1,5,2)
+# 	print x
+	# extract_phone_image_features(imgpath+x,58,2,1,5,2)
+extract_phone_image_features("anton.png",18,2,1,5,2)
 
 # def extract_image_features(imgorig,mask):
 #   img = cv2.imread(imgorig)
