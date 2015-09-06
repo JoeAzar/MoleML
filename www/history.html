@@ -8,7 +8,6 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="js/parse-1.5.0.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script type="text/javascript" src="js/parse/parse-session.js"></script>
 
     <script type="text/javascript" charset="utf-8" src="scripts/main.js"></script>
@@ -35,21 +34,8 @@
             <div style="width: 100%" class="left-align">
                 <img style="width: 30%; height: auto; max-width: 100px;" class="right" src="img/MoLe2.svg" />
             </div>
-            
-            <div class="row" style="margin-bottom: 0px">
-                <div class="col s12">
-                    <div class="card-panel" style="margin-bottom: 0px; position: relative; height: 220px">
-                        
-                        <div style="position: absolute; left: 5px; top: 0px; padding: 0px; width: 97%; padding-top: 5px;">
-                            <canvas id="c1" width="300px" height="170px"></canvas>
-                        </div>
-                        <div class="card-panel" style="position: absolute; left: 15px; top: 163px; padding-top: 10px; padding-bottom: 10px; width: 95px"><strong>Mole 10</strong>
-                        </div>
-                        <div class="card-panel" style="position: absolute; left: 120px; top: 163px; padding-top: 10px; padding-bottom: 10px; width: 190px"><a href="#"><strong class="blue-grey-text">See Photos</strong></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
 
         </div>
 
@@ -60,23 +46,71 @@
 <script type="text/javascript" src="materialize/js/materialize.js"></script>
 <script type="text/javascript" src="js/Chart.js"></script>
 <script type="text/javascript">
-    var ctx = $("#c1").get(0).getContext("2d");
     // This will get the first returned node in the jQuery collection.
-    var data = {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
-        datasets: [
-            {
-                label: "My First dataset",
-                fillColor: "rgba(220,220,220,0.2)",
-                strokeColor: "rgba(220,220,220,1)",
-                pointColor: "rgba(220,220,220,1)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(220,220,220,1)",
-                data: [65, 59, 80, 81, 56, 55, 40]
+
+
+
+    $(document).ready(function () {
+
+        var Archive = Parse.Object.extend('Archive');
+        var Mole = Parse.Object.extend('Mole');
+        var query = new Parse.Query(Archive);
+        var cont = $('.container');
+        query.equalTo("parent", Parse.User.current());
+        query.find({
+            success: function (results) {
+                console.log("Successfully retrieved " + results.length + " archives.");
+                for (var i = 0; i < results.length; i++) {
+                    var object = results[i];
+                    cont.append("<div class='row' style='margin-bottom: 0px'><div class='col s12'><div class='card-panel' style='margin-bottom: 0px; position: relative; height: 220px'><div style='position: absolute; left: 5px; top: 0px; padding: 0px; width: 97%; padding-top: 5px;'><canvas id='c" + object.id + "' width='300px' height='170px'></canvas></div><div class='card-panel' style='position: absolute; left: 15px; top: 163px; padding-top: 10px; padding-bottom: 10px; width: 95px'><strong>" + object.get('name') + "</strong></div><div class='card-panel' style='position: absolute; left: 120px; top: 163px; padding-top: 10px; padding-bottom: 10px; width: 190px'><a href='#'><strong class='blue-grey-text'>See Photos</strong></a></div></div></div></div>");
+                    var query2 = new Parse.Query(Archive);
+                    query2.get(object.id, {
+                        success: function (arc) {
+                            var query1 = new Parse.Query(Mole);
+                            query1.equalTo('parent', arc);
+                            query1.find({
+                                success: function (dataarr) //trouble spot
+                                    {
+                                        var tmp = [];
+                                        var data = {
+                                            labels: ["January", "February", "March", "April"],
+                                            datasets: [
+                                                {
+                                                    label: object.id,
+                                                    fillColor: "rgba(220,220,220,0.2)",
+                                                    strokeColor: "blue",
+                                                    pointColor: "gray",
+                                                    pointStrokeColor: "#fff",
+                                                    pointHighlightFill: "#fff",
+                                                    pointHighlightStroke: "rgba(220,220,220,1)",
+                                                    data: []
         }]
-    };
-    var myLineChart = new Chart(ctx).Line(data);
+                                        };
+                                        dataarr.forEach(function (elem) {
+                                            tmp.push(elem.get('certainty'));
+                                        });
+                                        data['datasets'][0]['data'] = tmp;
+                                        console.log(data);
+                                        var ctx = $("#c" + object.id).get(0).getContext("2d");
+                                        var myLineChart = new Chart(ctx).Line(data);
+                                    },
+                                error: function (error) {
+                                    console.log("Error: " + error.code + " " + error.message);
+                                }
+                            });
+                        },
+                        error: function (object, error) {
+                            console.log(error.message);
+                        }
+                    });
+
+                }
+            },
+            error: function (error) {
+                console.log("Error: " + error.code + " " + error.message);
+            }
+        });
+    });
 </script>
 
 

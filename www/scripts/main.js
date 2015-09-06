@@ -108,10 +108,10 @@ cameraApp.prototype = {
             if (data.hasOwnProperty('error')) {
                 alert('Upload failed.');
             } else {
+                localStorage.setItem('url',data['url']+"");
                 var url = encodeURIComponent(data['url']);
-                $.get('http://immense-brushlands-9104.herokuapp.com/image/' + url, function (data) {
-                    alert(data);
-                });
+                var cu = Parse.User.current();
+                window.location = 'newmole.html';
             }
         });
     },

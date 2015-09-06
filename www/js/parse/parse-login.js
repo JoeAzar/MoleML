@@ -22,8 +22,8 @@ function signup() {
     user.set("email", em);
      user.set("age", parseInt(age));
     user.set("sex", parseInt(ge));
-    user.set("family_history", (his === 'on') ? true : false);
-     user.set("tropical_climate", (tr === 'on') ? true : false);
+    user.set("family_history", (his === 'on') ? 2 : 1);
+     user.set("tropical_climate", (tr === 'on') ? 2 : 1);
 
     user.signUp(null, {
         success: function (user) {
