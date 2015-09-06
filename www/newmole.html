@@ -67,6 +67,8 @@
         var mole = new Mole();
         var arc = new Archive();
         console.log("subbed");
+        console.log('http://45.55.253.85:8000/' + localStorage.getItem('urle') + '/' + cu.get('age') + '/' + cu.get('sex') + '/' + cu.get('tropical_climate') + '/' + parseInt($('#lsel').val()) + '/' + cu.get('family_history'));
+        
         $.get('http://45.55.253.85:8000/' + localStorage.getItem('urle') + '/' + cu.get('age') + '/' + cu.get('sex') + '/' + cu.get('tropical_climate') + '/' + parseInt($('#lsel').val()) + '/' + cu.get('family_history'), function (data) {
             console.log("get init");
             arc.set('name', 'mole 1');
@@ -75,13 +77,17 @@
             arc.save(null, {
                 success: function (arc1) {
                     var da = data.split(" ");
-                    mole.set('isCancerous', da[2]);
-                    mole.set('certainty', da[0] * 100);
+                    console.log(da);
+                    mole.set('isCancerous', parseInt(da[2]));
+                    localStorage.setItem('isCancerous',parseInt(da[2]));
+                    mole.set('confidence', parseFloat(da[0]) * 100);
+                    localStorage.setItem('confidence',parseFloat(da[0]) * 100);
                     mole.set('URL', localStorage.getItem('url'));
                     mole.set('parent', arc);
                     mole.save(null, {
                         success: function (mole) {
                             console.log('New object created with objectId: ' + mole.id);
+                            window.location = 'results.html';
                         },
                         error: function (mole, error) {
                             console.log('Failed to create new object, with error code: ' + error.message);
@@ -109,7 +115,7 @@
                     arcc.append('<a href="#!" class="collection-item black-text"> No archives to display.</a>');
                 for (var i = 0; i < results.length; i++) {
                     var object = results[i];
-                    arcc.append("<a href='#!' class='collection-item black-text' onclick='submit(" + object.id + ")'><span class= 'blue-text'>" + object.get('name') + "</span> located on your <span class= 'blue-text'>" + translate(object.get('location_code')) + "</span>. Last updated <span class= 'blue-text'>" + (object.updatedAt + '').slice(4, 15) + '</span>.</a>');
+                    arcc.append("<a href='#!' onclick='sumbit('"+object.id+"')' class='collection-item black-text' onclick='submit(" + object.id + ")'><span class= 'blue-text'>" + object.get('name') + "</span> located on your <span class= 'blue-text'>" + translate(object.get('location_code')) + "</span>. Last updated <span class= 'blue-text'>" + (object.updatedAt + '').slice(4, 15) + '</span>.</a>');
                 }
             },
             error: function (error) {
@@ -123,18 +129,22 @@
             var Mole = Parse.Object.extend('Mole');
             var Archive = Parse.Object.extend('Archive');
             var query = new Parse.Query(Archive);
+            console.log('recd resp');
             query.get(id, {
                 success: function (arc) { //potential trouble
                     var mole = new Mole();
                     alert(arc);
                     var da = data.split(" ");
                     mole.set('isCancerous', da[2]);
-                    mole.set('certainty', da[0] * 100);
+                    localStorage.setItem('isCancerous',da[2]);
+                    mole.set('certainty', parseFloat(da[0]) * 100);
+                    localStorage.setItem('certainty',parseFloat(da[0]) * 100);
                     mole.set('URL', localStorage.getItem('url'));
                     mole.set('parent', arc);
                     mole.save(null, {
                         success: function (mole) {
                             console.log('New object created with objectId: ' + mole.id);
+                            window.location = 'results.html';
                         },
                         error: function (mole, error) {
                             console.log('Failed to create new object, with error code: ' + error.message);

@@ -57,6 +57,6 @@
 <script>
     function redir(){window.location = 'home.html';}
     
-    $('#text-box').append("<p>Your mole is likely <span style='font-size: 20px'>" + (localStorage.getItem("isCancerous") ? "cancerous" : "non-cancerous")+ "</span>. This has been determined with <span style='font-size: 20px'>"+(Math.round(parseFloat(localStorage.getItem("confidence")))) +"%</span> certainty.</p>");
+    $('#text-box').append("<p style='font-size: 30px; color: white'>Your mole is likely <span style='font-size: 35px; font-weight: bold'>" + (localStorage.getItem("isCancerous")==="1" ? "cancerous" : "non-cancerous")+ "</span>. This has been determined with <span style='font-size: 35px; font-weight: bold'>"+(Math.round(localStorage.getItem("confidence"))) +"%</span> certainty.</p>");
     </script>
 </html>

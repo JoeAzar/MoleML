@@ -31,3 +31,38 @@ function check() {
         alert('Failed because: ' + message);
     }
 }
+
+function check1() {
+    console.log('here');
+    navigator.camera.getPicture(onSuccess, onFail, {
+        quality: 50,
+        destinationType: Camera.DestinationType.DATA_URL,
+        sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+    });
+
+    function onSuccess(imageData) {
+        var b64 = "data:image/jpeg;base64," + imageData;
+        console.log('start');
+        $.post('https://api.cloudinary.com/v1_1/mole/image/upload', {
+            file: b64,
+            api_key: '838912264992939',
+            timestamp: (Date.now() / 1000 | 0) + '',
+            upload_preset: 'atdlnige'
+        }, function (data) {
+            if (data.hasOwnProperty('error')) {
+                alert('Upload failed.');
+            } else {
+                localStorage.setItem('url', data['url'] + "");
+                var urlOne = encodeURIComponent(data['url']);
+                var url = encodeURIComponent(urlOne);
+                localStorage.setItem('urle', url);
+                window.location = 'newmole.html';
+            }
+        });
+        console.log("camera success");
+    }
+
+    function onFail(message) {
+        alert('Failed because: ' + message);
+    }
+}
