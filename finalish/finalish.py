@@ -60,17 +60,12 @@ application = Flask(__name__)
 todos = {}
 @application.route('/')
 def hello():
-    return "sup bitches"
-@application.route('/imagePost')
+    return "Hurrah!"
+@application.route('/<image>/<age>/<gender>/<location>/<quantloc>/<concern>')
 @crossdomain(origin='*')
-def classify():
-    img = request.args.get('img')
-    age = request.args.get('age')
-    gender = request.args.get('gender')
-    location = request.args.get('location')
-    quantloc = request.args.get('quantloc')
-    concern = request.arges.get('concern')
-    res = extract_phone_image_features(img,age,gender,location,quantloc,concern)
+def classify(image, age, gender, location, quantloc, concern):
+	img=urllib.unquote(image)	
+	res = extract_phone_image_features(img=image,age=age,gender=gender,location=location,quantloc=quantloc,concern=concern)
 
 if __name__ == '__main__':
     application.run(host='0.0.0.0')

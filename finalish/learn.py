@@ -1,10 +1,10 @@
 from __future__ import division
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from sklearn import ensemble, preprocessing
 import pandas as pd
-from matplotlib import style
-style.use("ggplot")
+#from matplotlib import style
+#style.use("ggplot")
 import pickle
 import cPickle
 

@@ -72,7 +72,7 @@ def extract_phone_image_features(imgorig,age,gender,location,quantloc,concern):
 # 	x = image_list[index]
 # 	print x
 	# extract_phone_image_features(imgpath+x,58,2,1,5,2)
-extract_phone_image_features("anton.png",18,2,1,5,2)
+#extract_phone_image_features("anton.png",18,2,1,5,2)
 
 # def extract_image_features(imgorig,mask):
 #   img = cv2.imread(imgorig)

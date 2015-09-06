@@ -1,0 +1,425 @@
+------------------------------------------------------------
+/root/finalish/venv/bin/pip run on Sat Sep  5 22:43:40 2015
+Getting page https://pypi.python.org/simple/matplotlib/
+URLs to search for versions for matplotlib in /usr/lib/pymodules/python2.7:
+* https://pypi.python.org/simple/matplotlib/
+Analyzing links from page https://pypi.python.org/simple/matplotlib/
+  Skipping https://pypi.python.org/packages/2.6/m/matplotlib/matplotlib-1.4.0-cp26-none-win32.whl#md5=774d62b98c9a7bcfcf29b65c0b3bb056 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/2.6/m/matplotlib/matplotlib-1.4.0-cp26-none-win_amd64.whl#md5=198652a75d184f4f6900f74fb9d68a7f (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/2.6/m/matplotlib/matplotlib-1.4.1-cp26-none-win32.whl#md5=e60c572f1e731f0f311f601028d6d2ff (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping link https://pypi.python.org/packages/2.6/m/matplotlib/matplotlib-1.4.3.win-amd64-py2.6.exe#md5=9a611a9e6e84d636b21eb3e3788967e1 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .exe
+  Skipping link https://pypi.python.org/packages/2.6/m/matplotlib/matplotlib-1.4.3.win32-py2.6.exe#md5=4ff8ea1e9c28632ca8a7eb01278eae22 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .exe
+  Skipping https://pypi.python.org/packages/2.7/m/matplotlib/matplotlib-1.4.0-cp27-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=19649b0bbb78ef3a2cce1e1c64cbb78f (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/2.7/m/matplotlib/matplotlib-1.4.0-cp27-none-win32.whl#md5=bf8dfe71fd37d209d7287d4e0565f02b (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/2.7/m/matplotlib/matplotlib-1.4.0-cp27-none-win_amd64.whl#md5=f3f581901736f547e3e1e4d8f2b0872a (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping link https://pypi.python.org/packages/2.7/m/matplotlib/matplotlib-1.4.3.win-amd64-py2.7.exe#md5=7ad58b627e949d32ad6da2ab1406dd14 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .exe
+  Skipping link https://pypi.python.org/packages/2.7/m/matplotlib/matplotlib-1.4.3.win32-py2.7.exe#md5=f43c20480a1673185afefc7d4848a1d2 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .exe
+  Skipping https://pypi.python.org/packages/3.2/m/matplotlib/matplotlib-1.4.0-cp32-none-win32.whl#md5=3e508b3e606cdf49f8301f5a513cafba (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/3.2/m/matplotlib/matplotlib-1.4.0-cp32-none-win_amd64.whl#md5=d41dae609c981068207b1a5ea93cb066 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping link https://pypi.python.org/packages/3.2/m/matplotlib/matplotlib-1.4.3.win-amd64-py3.2.exe#md5=eb76498eeb0beea522cbbe24a5cdf9a8 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .exe
+  Skipping link https://pypi.python.org/packages/3.2/m/matplotlib/matplotlib-1.4.3.win32-py3.2.exe#md5=a6a993bfbbe5513cd8919ff87ba2c8f5 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .exe
+  Skipping https://pypi.python.org/packages/3.3/m/matplotlib/matplotlib-1.4.0-cp33-cp33m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=16d28bb4a986eb550a66e463f7b0494f (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/3.3/m/matplotlib/matplotlib-1.4.0-cp33-none-win32.whl#md5=015470511cc3f7f39ae26b502a0c5ff6 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/3.3/m/matplotlib/matplotlib-1.4.0-cp33-none-win_amd64.whl#md5=324189994b669b6a877f22084db86044 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping link https://pypi.python.org/packages/3.3/m/matplotlib/matplotlib-1.4.3.win-amd64-py3.3.exe#md5=9f386101413df16e41263beda85ba8c4 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .exe
+  Skipping link https://pypi.python.org/packages/3.3/m/matplotlib/matplotlib-1.4.3.win32-py3.3.exe#md5=5dc488e6b0d6b3bbae48bacb1e47e7c1 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .exe
+  Skipping https://pypi.python.org/packages/3.4/m/matplotlib/matplotlib-1.4.0-cp34-cp34m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=9f3be17be6556edcae2abfb2137c3c90 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/3.4/m/matplotlib/matplotlib-1.4.0-cp34-none-win32.whl#md5=d4bb6a18cb529858ff05be03f958fc66 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/3.4/m/matplotlib/matplotlib-1.4.0-cp34-none-win_amd64.whl#md5=84bba66e4aa7101005f7503708c186ac (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping link https://pypi.python.org/packages/3.4/m/matplotlib/matplotlib-1.4.3.win-amd64-py3.4.exe#md5=7991ad0df6446566896cb9118c938056 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .exe
+  Skipping link https://pypi.python.org/packages/3.4/m/matplotlib/matplotlib-1.4.3.win32-py3.4.exe#md5=99f045b799f5dd2a3204b500f5f90a81 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .exe
+  Skipping https://pypi.python.org/packages/cp26/m/matplotlib/matplotlib-1.4.1-cp26-none-win_amd64.whl#md5=54cce4489301fd650d16b4692d72e2d7 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp26/m/matplotlib/matplotlib-1.4.2-cp26-none-win32.whl#md5=e6d187725cb254607e0a88313a1a9a7f (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp26/m/matplotlib/matplotlib-1.4.2-cp26-none-win_amd64.whl#md5=8b9c0303b53547f16576a9cbd507266d (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp26/m/matplotlib/matplotlib-1.4.3-cp26-none-win32.whl#md5=a61a9fc4e0ac1d975cc42fdbb5aaacd2 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp26/m/matplotlib/matplotlib-1.4.3-cp26-none-win_amd64.whl#md5=b10e0d1be24b9709e0ee60b23441b52b (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp27/m/matplotlib/matplotlib-1.3.1-cp27-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=ea9eb2cf47e4ca76395077c247644b2f (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp27/m/matplotlib/matplotlib-1.4.1-cp27-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl#md5=3676532fd239968d6b37092461100b83 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp27/m/matplotlib/matplotlib-1.4.1-cp27-none-win32.whl#md5=2449c7ae50aca72959db453602da70e2 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp27/m/matplotlib/matplotlib-1.4.1-cp27-none-win_amd64.whl#md5=d42e20d37988efba3d5e98077a354a30 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp27/m/matplotlib/matplotlib-1.4.2-cp27-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl#md5=0ba8ec4c9c7f820b4b480b1360a1d92a (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp27/m/matplotlib/matplotlib-1.4.2-cp27-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=2ebafa80bb355f54bdb0349ea072c82d (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp27/m/matplotlib/matplotlib-1.4.2-cp27-none-win32.whl#md5=63dabdd2ef753514c354d0e032331508 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp27/m/matplotlib/matplotlib-1.4.2-cp27-none-win_amd64.whl#md5=f7e1ddc9043fd34804d8c5ee4842d9c9 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp27/m/matplotlib/matplotlib-1.4.3-cp27-none-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl#md5=5d514f89e628d651ac18421e57610cc4 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp27/m/matplotlib/matplotlib-1.4.3-cp27-none-win32.whl#md5=ecd17c868aae92b9da13aa503ff06fe4 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp27/m/matplotlib/matplotlib-1.4.3-cp27-none-win_amd64.whl#md5=c8dbb7bac4f70daf590ac4a1834d3b32 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp32/m/matplotlib/matplotlib-1.4.1-cp32-none-win32.whl#md5=48449add544042ff62c9f281739516de (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp32/m/matplotlib/matplotlib-1.4.1-cp32-none-win_amd64.whl#md5=fd9afa962240416fc24995460bc3c06f (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp32/m/matplotlib/matplotlib-1.4.2-cp32-none-win32.whl#md5=188ff74e5eda81b8144051f5cc2c7fc2 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp32/m/matplotlib/matplotlib-1.4.2-cp32-none-win_amd64.whl#md5=571a53d090ee2a614ad8ca0d24956050 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp32/m/matplotlib/matplotlib-1.4.3-cp32-none-win32.whl#md5=1f7d441b9cb9f4e53bc660915a4cca35 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp32/m/matplotlib/matplotlib-1.4.3-cp32-none-win_amd64.whl#md5=89576c72750649f229e4e4880d3d58ac (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp33/m/matplotlib/matplotlib-1.3.1-cp33-cp33m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=c274d751c438b69b478cb617503c3231 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp33/m/matplotlib/matplotlib-1.4.1-cp33-cp33m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl#md5=44bbcb3392486913228330eee3fa1c53 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp33/m/matplotlib/matplotlib-1.4.1-cp33-none-win32.whl#md5=452938b1678dafb9e787a75fbba0a44b (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp33/m/matplotlib/matplotlib-1.4.1-cp33-none-win_amd64.whl#md5=2dc81042eed64f50118e6b614331e193 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp33/m/matplotlib/matplotlib-1.4.2-cp33-cp33m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl#md5=df07cc9b6d3a51960a63cef14bae8625 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp33/m/matplotlib/matplotlib-1.4.2-cp33-cp33m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=f4ea1cb6e773cf10a6a5524027b88751 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp33/m/matplotlib/matplotlib-1.4.2-cp33-none-win32.whl#md5=d029826c5ebecbb8b4bf8ab18f364ebc (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp33/m/matplotlib/matplotlib-1.4.2-cp33-none-win_amd64.whl#md5=d7afd1928833071856812148245e7686 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp33/m/matplotlib/matplotlib-1.4.3-cp33-cp33m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl#md5=a69718bd499eeca3ff48cf0b43f2c0a9 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp33/m/matplotlib/matplotlib-1.4.3-cp33-none-win32.whl#md5=a5083b13120594260cec7ce3fb1643d1 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp33/m/matplotlib/matplotlib-1.4.3-cp33-none-win_amd64.whl#md5=9e9c1100d0bb531601cb2f4c097894d3 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp34/m/matplotlib/matplotlib-1.3.1-cp34-cp34m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=2c5ed43ecbddb347ef5e59cbfd42b366 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp34/m/matplotlib/matplotlib-1.4.1-cp34-cp34m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl#md5=2e180105afc523b4124cb49eea40c041 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp34/m/matplotlib/matplotlib-1.4.1-cp34-none-win32.whl#md5=a0754a1bac3dd3df3ec122fb439f4785 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp34/m/matplotlib/matplotlib-1.4.1-cp34-none-win_amd64.whl#md5=3a3e1367770069a23446b76592945bdb (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp34/m/matplotlib/matplotlib-1.4.2-cp34-cp34m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl#md5=50ad974d57127ca1b7b9665f0e65a2d5 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp34/m/matplotlib/matplotlib-1.4.2-cp34-cp34m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.whl#md5=8c80bd45ade879fc0bcc1b76ec80ba1d (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp34/m/matplotlib/matplotlib-1.4.2-cp34-none-win32.whl#md5=f18b7568493bece5c7b3eb7bb4203826 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp34/m/matplotlib/matplotlib-1.4.2-cp34-none-win_amd64.whl#md5=fb0e4ae9af8b9fb6505cc3dfde5652cd (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp34/m/matplotlib/matplotlib-1.4.3-cp34-cp34m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl#md5=63e558ef34a34c2eb7bb88df108a1c5e (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp34/m/matplotlib/matplotlib-1.4.3-cp34-none-win32.whl#md5=e2bc896c9513e4e22f6864550d6ec905 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Skipping https://pypi.python.org/packages/cp34/m/matplotlib/matplotlib-1.4.3-cp34-none-win_amd64.whl#md5=72e96f66866523cb5974f52038d25242 (from https://pypi.python.org/simple/matplotlib/) because it is not compatible with this Python
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-0.86.1.tar.gz#md5=d3727dc75c4c1cff0b0bae856b4e5ad8 (from https://pypi.python.org/simple/matplotlib/), version: 0.86.1
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-0.86.2.tar.gz#md5=9bb3f2b70a26e131c6b10743e8c49fc5 (from https://pypi.python.org/simple/matplotlib/), version: 0.86.2
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-0.86.tar.gz#md5=4770cbcddabcbab72d48fbb237ed5d8c (from https://pypi.python.org/simple/matplotlib/), version: 0.86
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-0.91.0.tar.gz#md5=059aa32556644760aef9cec9fb8fc3ac (from https://pypi.python.org/simple/matplotlib/), version: 0.91.0
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-0.91.1.tar.gz#md5=56a9344b077b5accbc4823be19f69dd6 (from https://pypi.python.org/simple/matplotlib/), version: 0.91.1
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.0.1.tar.gz#md5=2196c0482d5b33dc8d33f67bbafc1323 (from https://pypi.python.org/simple/matplotlib/), version: 1.0.1
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.1.0.tar.gz#md5=091a4d08c6f9fd7e5f7f63adc1abc351 (from https://pypi.python.org/simple/matplotlib/), version: 1.1.0
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.1.1.tar.gz#md5=30ee59119599331bf1f3b6e838fee9a8 (from https://pypi.python.org/simple/matplotlib/), version: 1.1.1
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.3.1.tar.gz#md5=789699851de28a543f3d244cf657ff68 (from https://pypi.python.org/simple/matplotlib/), version: 1.3.1
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.4.0.tar.gz#md5=1daf7f2123d94745feac1a30b210940c (from https://pypi.python.org/simple/matplotlib/), version: 1.4.0
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.4.1.tar.gz#md5=f9bb4d27988f2b4496ddd5447a792c54 (from https://pypi.python.org/simple/matplotlib/), version: 1.4.1
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.4.1rc1.tar.gz#md5=14e972c592e7ea2437381830778727bb (from https://pypi.python.org/simple/matplotlib/), version: 1.4.1rc1
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.4.2.tar.gz#md5=7d22efb6cce475025733c50487bd8898 (from https://pypi.python.org/simple/matplotlib/), version: 1.4.2
+  Found link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.4.3.tar.gz#md5=86af2e3e3c61849ac7576a6f5ca44267 (from https://pypi.python.org/simple/matplotlib/), version: 1.4.3
+  Skipping link http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/); not a file
+  Skipping link http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/); not a file
+  Skipping link http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .php
+  Skipping link http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .php
+  Skipping link http://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.1.0/ (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .0
+  Skipping link http://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.1.1/ (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .1
+  Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.2.0/matplotlib-1.2.0.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+  Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.2.1/matplotlib-1.2.1.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+  Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.3.0/matplotlib-1.3.0.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+  Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.3.1/matplotlib-1.3.1.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+  Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.0/matplotlib-1.4.0.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+  Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.1/matplotlib-1.4.1.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+  Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.1rc1/matplotlib-1.4.1rc1.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+  Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.2/matplotlib-1.4.2.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+  Skipping https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.3/matplotlib-1.4.3.tar.gz (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+  Skipping link https://sourceforge.net/project/showfiles.php?group_id=80706&package_id=278194 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .php
+  Skipping link https://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .php
+  Skipping link https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-0.99.1/ (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .1
+  Skipping link https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-0.99.3/ (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .3
+  Skipping link https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.0 (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .0
+  Skipping link https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.0.1/ (from https://pypi.python.org/simple/matplotlib/); unknown archive format: .1
+  Skipping https://svn.sourceforge.net/svnroot/matplotlib/trunk/matplotlib#egg=matplotlib-dev (from https://pypi.python.org/simple/matplotlib/) because it is externally hosted.
+Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.org (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://matplotlib.sourceforge.net (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.1.0/ (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching http://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.1.1/ (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.2.0/matplotlib-1.2.0.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.2.1/matplotlib-1.2.1.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.3.0/matplotlib-1.3.0.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.3.1/matplotlib-1.3.1.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.0/matplotlib-1.4.0.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.1/matplotlib-1.4.1.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.1rc1/matplotlib-1.4.1rc1.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.2/matplotlib-1.4.2.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://downloads.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.4.3/matplotlib-1.4.3.tar.gz (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://sourceforge.net/project/showfiles.php?group_id=80706&package_id=278194 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://sourceforge.net/project/showfiles.php?group_id=80706&package_id=278194 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://sourceforge.net/project/showfiles.php?group_id=80706&package_id=82474 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-0.99.1/ (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-0.99.3/ (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.0 (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Not searching https://sourceforge.net/projects/matplotlib/files/matplotlib/matplotlib-1.0.1/ (from https://pypi.python.org/simple/matplotlib/) for files because external urls are disallowed.
+Ignoring link https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.4.1rc1.tar.gz#md5=14e972c592e7ea2437381830778727bb (from https://pypi.python.org/simple/matplotlib/), version 1.4.1rc1 is a pre-release (use --pre to allow).
+Using version 1.4.3 (newest of versions: 1.4.3, 1.4.2, 1.4.1, 1.4.0, 1.3.1, 1.3.1, 1.1.1, 1.1.0, 1.0.1, 0.91.1, 0.91.0, 0.86.2, 0.86.1, 0.86)
+Downloading/unpacking matplotlib from https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.4.3.tar.gz#md5=86af2e3e3c61849ac7576a6f5ca44267
+  Downloading from URL https://pypi.python.org/packages/source/m/matplotlib/matplotlib-1.4.3.tar.gz#md5=86af2e3e3c61849ac7576a6f5ca44267
+  Running setup.py (path:/root/finalish/venv/build/matplotlib/setup.py) egg_info for package matplotlib
+    ============================================================================
+    Edit setup.cfg to change the build options
+    
+    BUILDING MATPLOTLIB
+                matplotlib: yes [1.4.3]
+                    python: yes [2.7.6 (default, Jun 22 2015, 17:58:13)  [GCC
+                            4.8.2]]
+                  platform: yes [linux2]
+    
+    REQUIRED DEPENDENCIES AND EXTENSIONS
+                     numpy: yes [version 1.9.2]
+                       six: yes [using six version 1.5.2]
+                  dateutil: yes [using dateutil version 1.5]
+                      pytz: yes [using pytz version 2012c]
+                   tornado: yes [using tornado version 3.1.1]
+                 pyparsing: yes [using pyparsing version 2.0.1]
+                     pycxx: yes [Couldn't import.  Using local copy.]
+                    libagg: yes [pkg-config information for 'libagg' could not
+                            be found. Using local copy.]
+                  freetype: no  [The C/C++ header for freetype2 (ft2build.h)
+                            could not be found.  You may need to install the
+                            development package.]
+                       png: no  [pkg-config information for 'libpng' could not
+                            be found.]
+                     qhull: yes [pkg-config information for 'qhull' could not be
+                            found. Using local copy.]
+    
+    OPTIONAL SUBPACKAGES
+               sample_data: yes [installing]
+                  toolkits: yes [installing]
+                     tests: yes [using nose version 1.3.1 / mock is required to
+                            run the matplotlib test suite.  pip/easy_install may
+                            attempt to install it after matplotlib.]
+            toolkits_tests: yes [using nose version 1.3.1 / mock is required to
+                            run the matplotlib test suite.  pip/easy_install may
+                            attempt to install it after matplotlib.]
+    
+    OPTIONAL BACKEND EXTENSIONS
+                    macosx: no  [Mac OS-X only]
+                    qt5agg: no  [PyQt5 not found]
+                    qt4agg: yes [installing, Qt: 4.8.6, PyQt: 4.8.6]
+                    pyside: no  [PySide not found]
+                   gtk3agg: no  [Requires pygobject to be installed.]
+    /usr/lib/python2.7/dist-packages/gtk-2.0/gtk/__init__.py:57: GtkWarning: could not open display
+      warnings.warn(str(e), _gtk.Warning)
+                 gtk3cairo: no  [Requires pygobject to be installed.]
+                    gtkagg: no  [The C/C++ header for gtk (gtk/gtk.h) could not
+                            be found.  You may need to install the development
+                            package.]
+                     tkagg: no  [The C/C++ header for Tk (tk.h) could not be
+                            found.  You may need to install the development
+                            package.]
+                     wxagg: no  [requires wxPython]
+                       gtk: no  [The C/C++ header for gtk (gtk/gtk.h) could not
+                            be found.  You may need to install the development
+                            package.]
+                       agg: yes [installing]
+                     cairo: yes [installing, pycairo version 1.8.8]
+                 windowing: no  [Microsoft Windows only]
+    
+    OPTIONAL LATEX DEPENDENCIES
+                    dvipng: yes [version 1.14]
+               ghostscript: yes [version 9.10]
+                     latex: no
+                   pdftops: no
+    
+    ============================================================================
+                            * The following required packages can not be built:
+                            * freetype, png
+    Complete output from command python setup.py egg_info:
+    ============================================================================
+
+Edit setup.cfg to change the build options
+
+
+
+BUILDING MATPLOTLIB
+
+            matplotlib: yes [1.4.3]
+
+                python: yes [2.7.6 (default, Jun 22 2015, 17:58:13)  [GCC
+
+                        4.8.2]]
+
+              platform: yes [linux2]
+
+
+
+REQUIRED DEPENDENCIES AND EXTENSIONS
+
+                 numpy: yes [version 1.9.2]
+
+                   six: yes [using six version 1.5.2]
+
+              dateutil: yes [using dateutil version 1.5]
+
+                  pytz: yes [using pytz version 2012c]
+
+               tornado: yes [using tornado version 3.1.1]
+
+             pyparsing: yes [using pyparsing version 2.0.1]
+
+                 pycxx: yes [Couldn't import.  Using local copy.]
+
+                libagg: yes [pkg-config information for 'libagg' could not
+
+                        be found. Using local copy.]
+
+              freetype: no  [The C/C++ header for freetype2 (ft2build.h)
+
+                        could not be found.  You may need to install the
+
+                        development package.]
+
+                   png: no  [pkg-config information for 'libpng' could not
+
+                        be found.]
+
+                 qhull: yes [pkg-config information for 'qhull' could not be
+
+                        found. Using local copy.]
+
+
+
+OPTIONAL SUBPACKAGES
+
+           sample_data: yes [installing]
+
+              toolkits: yes [installing]
+
+                 tests: yes [using nose version 1.3.1 / mock is required to
+
+                        run the matplotlib test suite.  pip/easy_install may
+
+                        attempt to install it after matplotlib.]
+
+        toolkits_tests: yes [using nose version 1.3.1 / mock is required to
+
+                        run the matplotlib test suite.  pip/easy_install may
+
+                        attempt to install it after matplotlib.]
+
+
+
+OPTIONAL BACKEND EXTENSIONS
+
+                macosx: no  [Mac OS-X only]
+
+                qt5agg: no  [PyQt5 not found]
+
+                qt4agg: yes [installing, Qt: 4.8.6, PyQt: 4.8.6]
+
+                pyside: no  [PySide not found]
+
+               gtk3agg: no  [Requires pygobject to be installed.]
+
+/usr/lib/python2.7/dist-packages/gtk-2.0/gtk/__init__.py:57: GtkWarning: could not open display
+
+  warnings.warn(str(e), _gtk.Warning)
+
+             gtk3cairo: no  [Requires pygobject to be installed.]
+
+                gtkagg: no  [The C/C++ header for gtk (gtk/gtk.h) could not
+
+                        be found.  You may need to install the development
+
+                        package.]
+
+                 tkagg: no  [The C/C++ header for Tk (tk.h) could not be
+
+                        found.  You may need to install the development
+
+                        package.]
+
+                 wxagg: no  [requires wxPython]
+
+                   gtk: no  [The C/C++ header for gtk (gtk/gtk.h) could not
+
+                        be found.  You may need to install the development
+
+                        package.]
+
+                   agg: yes [installing]
+
+                 cairo: yes [installing, pycairo version 1.8.8]
+
+             windowing: no  [Microsoft Windows only]
+
+
+
+OPTIONAL LATEX DEPENDENCIES
+
+                dvipng: yes [version 1.14]
+
+           ghostscript: yes [version 9.10]
+
+                 latex: no
+
+               pdftops: no
+
+
+
+============================================================================
+
+                        * The following required packages can not be built:
+
+                        * freetype, png
+
+----------------------------------------
+Cleaning up...
+  Removing temporary dir /root/finalish/venv/build...
+Command python setup.py egg_info failed with error code 1 in /root/finalish/venv/build/matplotlib
+Exception information:
+Traceback (most recent call last):
+  File "/root/finalish/venv/local/lib/python2.7/site-packages/pip/basecommand.py", line 122, in main
+    status = self.run(options, args)
+  File "/root/finalish/venv/local/lib/python2.7/site-packages/pip/commands/install.py", line 278, in run
+    requirement_set.prepare_files(finder, force_root_egg_info=self.bundle, bundle=self.bundle)
+  File "/root/finalish/venv/local/lib/python2.7/site-packages/pip/req.py", line 1229, in prepare_files
+    req_to_install.run_egg_info()
+  File "/root/finalish/venv/local/lib/python2.7/site-packages/pip/req.py", line 325, in run_egg_info
+    command_desc='python setup.py egg_info')
+  File "/root/finalish/venv/local/lib/python2.7/site-packages/pip/util.py", line 697, in call_subprocess
+    % (command_desc, proc.returncode, cwd))
+InstallationError: Command python setup.py egg_info failed with error code 1 in /root/finalish/venv/build/matplotlib
