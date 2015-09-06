@@ -61,7 +61,7 @@ todos = {}
 def hello():
   # isCancerous = extract_phone_image_features("anton.png",18,2,1,5,1)
 #return ' {"isCancerous" : "%s" , "probability" : "%s"} ' % isCancerous, probability
-  return str(isCancerous)
+  return "test"
 @application.route('/<image>/<age>/<gender>/<location>/<quantloc>/<concern>')
 @crossdomain(origin='*')
 def classify(image, age, gender, location, quantloc, concern):
