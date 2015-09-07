@@ -23,7 +23,8 @@ def extract_phone_image_features(imgorig,age,gender,location,quantloc,concern):
   height, width, channels = img.shape
   mh = height/2 
   mw = width/2
-  img = img[(mh-300):(mh+300),(mw-300):(mw+300)]
+  if (mh > 600 and mw > 600):
+    img = img[(mh-300):(mh+300),(mw-300):(mw+300)]
   # cv2.imshow('lel',img)
   x, y, _ = img.shape
   image = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
@@ -38,6 +39,7 @@ def extract_phone_image_features(imgorig,age,gender,location,quantloc,concern):
   gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
   symmetry_ssim = assymmetry.get_symmetry_ssim(image)
   symmetry_mse = assymmetry.get_symmetry_mse(image)
+
   #symmetry_mse = 0
   border_gof = border.get_gof(gray)
   #print border_gof
@@ -56,7 +58,7 @@ def extract_phone_image_features(imgorig,age,gender,location,quantloc,concern):
     # print clf2
   # print imgorig
   return AnalysisSpec(current_vec)
-# extract_phone_image_features("mole.jpg",1,1,1,1,1)
+# print extract_phone_image_features("tester2.tif",53,2,1,6,2)
     # prediction = clf2.predict(np.array(current_vec))[0]
     # print prediction
     # print current_vec
