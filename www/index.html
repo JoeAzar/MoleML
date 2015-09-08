@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/parse-1.5.0.min.js"></script>
+    <script type="text/javascript" src="js/parse/parse-session-index.js"></script>
+    <style type="text/css">
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
+
+<body class="blue-grey">
+    <main>
+        <div class="container">
+            <img style="width: 100%; height: auto;" src="img/MoLe2.svg" />
+            <div class="row" style="margin-top: -100px;">
+                <div class="col s12 center-align" style="color: whitesmoke">
+                    <p>
+                        The Melanoma and Basal Cell Carcinoma detector.
+                    </p>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px;">
+                <div class="col s12 center-align">
+                    <a class="waves-effect waves-yellow btn-large blue-grey lighten-5" style="color: black; width: 90%" onclick="redir_to_login()"><i class="material-icons left"></i>Login</a>
+                </div>
+            </div>
+            <div class="row" style="margin-top: -10px; margin-bottom: 0px;">
+                <div class="col s12 center-align">
+                    <a class="waves-effect waves-yellow btn-large blue-grey lighten-5" style="color: black; width: 90%" onclick="redir_to_acc()"><i class="material-icons left"></i>Create Account</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+<footer class="page-footer blue-grey" style="margin-top: 0px; padding-top: 0px;">
+    <div class="row center-align" style="">
+        <p><em><a onclick="redir_to_home()" href="#" style="text-decoration: underline; color: black">Skip this step</a></em>
+        </p>
+    </div>
+</footer>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.js"></script>
+
+</html>
