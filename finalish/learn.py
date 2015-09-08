@@ -42,7 +42,7 @@ FEATURES =  ['sym','ssim','border_gof', 'color_contrast', 'age','gender','locati
 def Build_Data_Set():
   data_df = pd.DataFrame.from_csv("compiledfinal.csv")
 
-  # data_df = data_df.reindex(np.random.permutation(data_df.index))
+  data_df = data_df.reindex(np.random.permutation(data_df.index))
   X = np.array(data_df[FEATURES].values)
   y = ( data_df["cancerous"].values.tolist()  )
 
@@ -96,7 +96,7 @@ def Analysis():
   X, y = Build_Data_Set()
   # print(len(X))
 
-  clf = RandomForestClassifier(n_estimators = 30)
+  clf = svm.SVC(probability=True)
   clf.fit(X[:-test_size],y[:-test_size]) # train data
   # print clf.predict_proba(X[3])
   # print clf.predict(X[3])[0]
@@ -142,7 +142,7 @@ def AnalysisSpec(vector):
   with open('benign_averages.txt', 'r') as benign_file:
     benign_avgs = [float(line.rstrip('\n')) for line in benign_file]
   support_count = 0
-
+  print clf.predict(vector)[0]
   if clf.predict(vector)[0] == 1:
     for i in range(0,8):
       if vector[i] < malignant_avgs[i]:
@@ -151,13 +151,16 @@ def AnalysisSpec(vector):
     for j in range(0,8):
       if vector[j] < benign_avgs[j]:
         support_count += 1
-  if support_count > 3:
+  if support_count > 1:
     finalVector = clf.predict(vector)[0]
-  if support_count <= 3:
+  if support_count <= 1:
     if (clf.predict(vector)[0] == 1):
       finalVector = 0
     else: 
-      finalVector = 0
+      finalVector = 1
+  print support_count
+  # if vector[4]==53 and vector[5]==2 and vector[6]==1 and vector[7]==6 and vector[8]==2:
+    # finalVector = 1
   # print support_count
 
   arrayFinal = [clf.predict_proba(vector)[0][0], clf.predict_proba(vector)[0][1], finalVector]
@@ -174,4 +177,4 @@ def AnalysisSpec(vector):
 
 # Randomizing()
 
-# Analysis()
+Analysis()
