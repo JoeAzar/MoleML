@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/parse-1.5.0.min.js"></script>
+    <script type="text/javascript" src="js/parse/parse-login.js"></script>
+    <style type="text/css">
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
+
+<body class="blue-grey">
+    <main>
+        <div class="container">
+            <img style="width: 100%; height: auto; padding-top: 40px; padding-bottom: 30px;" src="img/MoLe3.svg" />
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header active" style="background-color: #F0F0F1;"><i class="material-icons">add</i>Create new mole archive</div>
+                    <div class="collapsible-body center-align" style="background-color: white">
+                        <p style="padding-left: 5%; padding-top: 5px; padding-bottom: 5px">Please select the location of the mole:</p>
+                        <select class="browser-default" id="lsel" style="width: 90%; margin-left: 5%; margin-bottom: 20px;">
+                            <option value="1">Left Arm</option>
+                            <option value="2">Right Arm</option>
+                            <option value="3">Left Leg</option>
+                            <option value="4">Right leg</option>
+                            <option value="5">Torso</option>
+                            <option value="6">Head/Neck</option>
+                        </select>
+                        <button class="btn waves-effect waves-light" style="margin-bottom: 15px; margin-top: -5px;" type="submit" id="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class="collapsible-header" style="background-color: #F0F0F1;"><i class="material-icons">library_add</i>Update existing archive</div>
+                    <div class="collapsible-body" style="background-color: white">
+                        <div class="collection" style="background-color: white; margin-top: 0px;" id="archive-container">
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.js"></script>
+<script type="text/javascript" src="js/jquery.cloudinary.js"></script>
+<script type="text/javascript">
+    $('#submit').click(function (evt) {
+        var Mole = Parse.Object.extend('Mole');
+        var cu = Parse.User.current();
+        var Archive = Parse.Object.extend('Archive');
+        var mole = new Mole();
+        var arc = new Archive();
+        console.log("subbed");
+        console.log('http://45.55.253.85:8000/' + localStorage.getItem('urle') + '/' + cu.get('age') + '/' + cu.get('sex') + '/' + cu.get('tropical_climate') + '/' + parseInt($('#lsel').val()) + '/' + cu.get('family_history'));
+        
+        $.get('http://45.55.253.85:8000/' + localStorage.getItem('urle') + '/' + cu.get('age') + '/' + cu.get('sex') + '/' + cu.get('tropical_climate') + '/' + parseInt($('#lsel').val()) + '/' + cu.get('family_history'), function (data) {
+            console.log("get init");
+            arc.set('name', 'mole 1');
+            arc.set('parent', Parse.User.current());
+            arc.set('location_code', parseInt($('#lsel').val()));
+            arc.save(null, {
+                success: function (arc1) {
+                    var da = data.split(" ");
+                    console.log(da);
+                    mole.set('isCancerous', parseInt(da[2]));
+                    localStorage.setItem('isCancerous',parseInt(da[2]));
+                    mole.set('confidence', parseFloat(da[0]) * 100);
+                    localStorage.setItem('confidence',parseFloat(da[0]) * 100);
+                    mole.set('URL', localStorage.getItem('url'));
+                    mole.set('parent', arc);
+                    mole.save(null, {
+                        success: function (mole) {
+                            console.log('New object created with objectId: ' + mole.id);
+                            window.location = 'results.html';
+                        },
+                        error: function (mole, error) {
+                            console.log('Failed to create new object, with error code: ' + error.message);
+                        }
+                    });
+                },
+                error: function (arc1, error) {
+                    console.log('Failed to create new object, with error code: ' + error.message);
+                }
+            });
+        });
+
+
+    });
+
+    $(document).ready(function () {
+        var Archive = Parse.Object.extend('Archive');
+        var query = new Parse.Query(Archive);
+        var arcc = $('#archive-container');
+        query.equalTo("parent", Parse.User.current());
+        query.find({
+            success: function (results) {
+                console.log("Successfully retrieved " + results.length + " archives.");
+                if (results.length == 0)
+                    arcc.append('<a href="#!" class="collection-item black-text"> No archives to display.</a>');
+                for (var i = 0; i < results.length; i++) {
+                    var object = results[i];
+                    arcc.append("<a href='#!' onclick='sumbit('"+object.id+"')' class='collection-item black-text' onclick='submit(" + object.id + ")'><span class= 'blue-text'>" + object.get('name') + "</span> located on your <span class= 'blue-text'>" + translate(object.get('location_code')) + "</span>. Last updated <span class= 'blue-text'>" + (object.updatedAt + '').slice(4, 15) + '</span>.</a>');
+                }
+            },
+            error: function (error) {
+                console.log("Error: " + error.code + " " + error.message);
+            }
+        });
+    });
+
+    function submit(id) {
+        $.get('http://45.55.253.85:8000/' + url + '/' + cu.get('age') + '/' + cu.get('sex') + '/' + cu.get('tropical_climate') + '/' + parseInt($('#lsel').val()) + '/' + cu.get('family_history'), function (data) {
+            var Mole = Parse.Object.extend('Mole');
+            var Archive = Parse.Object.extend('Archive');
+            var query = new Parse.Query(Archive);
+            console.log('recd resp');
+            query.get(id, {
+                success: function (arc) { //potential trouble
+                    var mole = new Mole();
+                    alert(arc);
+                    var da = data.split(" ");
+                    mole.set('isCancerous', da[2]);
+                    localStorage.setItem('isCancerous',da[2]);
+                    mole.set('certainty', parseFloat(da[0]) * 100);
+                    localStorage.setItem('certainty',parseFloat(da[0]) * 100);
+                    mole.set('URL', localStorage.getItem('url'));
+                    mole.set('parent', arc);
+                    mole.save(null, {
+                        success: function (mole) {
+                            console.log('New object created with objectId: ' + mole.id);
+                            window.location = 'results.html';
+                        },
+                        error: function (mole, error) {
+                            console.log('Failed to create new object, with error code: ' + error.message);
+                        }
+                    });
+                },
+                error: function (err, d) {}
+            });
+
+        });
+
+    }
+
+    function translate(x) {
+        switch (x) {
+        case 1:
+            return "Left Arm";
+        case 2:
+            return "Right Arm";
+        case 3:
+            return "Left Leg";
+        case 4:
+            return "Right Leg";
+        case 5:
+            return "Torso";
+        case 6:
+            return "Head/Neck";
+        }
+    }
+</script>
+
+</html>
